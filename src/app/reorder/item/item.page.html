@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+         Ion Reorder
+      </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item button (click)="showDetail(reorder)" *ngFor="let reorder of reorders">
+          <ion-label>
+            <h3>{{reorder.title}}</h3>
+          </ion-label>
+        </ion-item>
+    </ion-list>
+</ion-content>

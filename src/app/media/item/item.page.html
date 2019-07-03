@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+    <ion-title>
+       Item
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item 
+  [routerDirection]="'root'" 
+  [routerLink]="[p.url]"
+  *ngFor="let p of appItems">
+    <ion-label>
+        {{p.title}}
+    </ion-label>
+  </ion-item>
+</ion-content>

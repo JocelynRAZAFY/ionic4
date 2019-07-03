@@ -1,0 +1,63 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+        loading
+      </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-button expand="block" (click)="presentLoading()">present Loading</ion-button>
+    <ion-button expand="block" (click)="presentLoadingWithOptions()">
+        present Loading With Options
+    </ion-button>
+
+    <ion-list>
+        <ion-item>
+          <ion-label text-wrap>
+            <ion-text color="primary">
+              <h3>Default Progressbar</h3>
+            </ion-text>
+            <!-- Default Progressbar -->
+            <ion-progress-bar></ion-progress-bar>
+          </ion-label>
+        </ion-item>
+
+        <ion-item>
+            <ion-label text-wrap>
+              <ion-text color="primary">
+                <h3>Default Progressbar with 50 percent</h3>
+              </ion-text>
+              <!-- Default Progressbar with 50 percent -->
+              <ion-progress-bar value="0.5"></ion-progress-bar>
+            </ion-label>
+        </ion-item>
+
+        <ion-item>
+            <ion-label text-wrap>
+              <ion-text color="primary">
+                <h3>Colorize Progressbar</h3>
+              </ion-text>
+              <!-- Colorize Progressbar -->
+              <ion-progress-bar color="primary" value="0.5"></ion-progress-bar>
+              <ion-progress-bar color="secondary" value="0.5"></ion-progress-bar>
+            </ion-label>
+        </ion-item>
+
+        <ion-item>
+            <ion-label text-wrap>
+              <ion-text color="primary">
+                <h3>Other types</h3>
+              </ion-text>
+              <!-- Other types -->
+              <ion-progress-bar value="0.25" buffer="0.5"></ion-progress-bar>
+              <ion-progress-bar type="indeterminate"></ion-progress-bar>
+              <ion-progress-bar type="indeterminate" reversed="true"></ion-progress-bar>
+            </ion-label>
+        </ion-item>
+      </ion-list>
+    
+</ion-content>

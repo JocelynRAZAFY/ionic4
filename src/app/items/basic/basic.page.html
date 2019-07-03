@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+      <ion-title>
+         Item Basic
+      </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+    <ion-item color="danger" routerLink="/items/item" routerDirection="root">
+        <ion-label>
+          Retour
+        </ion-label>
+    </ion-item>
+
+    <!-- Default Item -->
+  <ion-item>
+    <ion-label>
+      Item
+    </ion-label>
+  </ion-item>
+
+  <!-- Item as a Button -->
+  <ion-item (click)="buttonClick()">
+    <ion-label>
+      Button Item
+    </ion-label>
+  </ion-item>
+
+  <!-- Item as an Anchor -->
+  <ion-item href="https://www.ionicframework.com">
+    <ion-label>
+      Anchor Item
+    </ion-label>
+  </ion-item>
+
+  <ion-item color="secondary">
+    <ion-label>
+      Secondary Color Item
+    </ion-label>
+  </ion-item>
+  
+</ion-content>

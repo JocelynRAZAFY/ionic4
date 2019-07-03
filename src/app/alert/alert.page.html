@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+      <ion-title>
+          Alert
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+    <ion-button expand="block" (click)="presentAlert()">present Alert</ion-button>
+    <ion-button expand="block" (click)="presentAlertMultipleButtons()">
+        present Alert Multiple Buttons
+    </ion-button>
+    <ion-button expand="block" (click)="presentAlertConfirm()">
+        present Alert Confirm
+    </ion-button>
+    <ion-button expand="block" (click)="presentAlertPrompt()">
+        present Alert Prompt
+    </ion-button>
+    <ion-button expand="block" (click)="presentAlertRadio()">
+        present Alert Radio
+    </ion-button>
+    <ion-button expand="block" (click)="presentAlertCheckbox()">
+        present Alert Checkbox
+    </ion-button>
+</ion-content>

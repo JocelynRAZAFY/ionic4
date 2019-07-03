@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+         Modal Nav
+      </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button expand="block" (click)="presentModal()">Show Modal</ion-button>
+  <ion-button expand="block" (click)="pushPage()">push Page</ion-button>
+  <ion-list>
+        <ion-item button (click)="showDetail(tech)" *ngFor="let tech of techs">
+          <ion-icon slot="start" name="{{tech.icon}}" :style="{{tech.color}}"></ion-icon>
+          <ion-label>
+            <h3>{{tech.title}}</h3>
+          </ion-label>
+        </ion-item>
+    </ion-list>
+</ion-content>
