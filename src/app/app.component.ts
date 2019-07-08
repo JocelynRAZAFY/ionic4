@@ -12,7 +12,7 @@ export class AppComponent {
 
   public appPages = [
     {
-      title: 'Tabs',
+      title: 'Index',
       url: '/tabs',
       icon: 'tablet-portrait'
     },
@@ -155,6 +155,36 @@ export class AppComponent {
       title: 'Slide',
       url: '/slide',
       icon: 'albums'
+    },
+    {
+      title: 'Tab',
+      url: '/tab',
+      icon: 'business'
+    },
+    {
+      title: 'Toast',
+      url: '/toast',
+      icon: 'logo-octocat'
+    },
+    {
+      title: 'Toggle',
+      url: '/toggle',
+      icon: 'thunderstorm'
+    },
+    {
+      title: 'Toolbar',
+      url: '/toolbar',
+      icon: 'barcode'
+    },
+    {
+      title: 'Text',
+      url: '/text',
+      icon: 'text'
+    },
+    {
+      title: 'Native',
+      url: '/nats',
+      icon: 'planet'
     }
   ];
   

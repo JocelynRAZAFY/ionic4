@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+         Item
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-list>
+      <ion-item button (click)="showDetail(native)" *ngFor="let native of natives">
+        <ion-label>
+          <h3>{{native.title}}</h3>
+        </ion-label>
+      </ion-item>
+  </ion-list>
+  
+  </ion-content>
+  

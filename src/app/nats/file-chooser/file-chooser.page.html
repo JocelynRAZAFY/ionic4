@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+         File Chooser
+      </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-button expand="full" (click)="fileCho()">Full Button</ion-button>
+    <ion-item>
+        <ion-label>
+          {{ file }}
+        </ion-label>
+    </ion-item>
+
+    <ion-list>
+        <ion-item>
+          <ion-thumbnail slot="start">
+              <ion-img [src]="newImg"></ion-img>
+          </ion-thumbnail>
+          <ion-label>new Image</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-thumbnail slot="start">
+                <ion-img [src]="file"></ion-img>
+            </ion-thumbnail>
+            <ion-label>Image origine</ion-label>
+          </ion-item>
+    </ion-list>
+</ion-content>

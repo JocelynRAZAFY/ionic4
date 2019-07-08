@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+       Item
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item button (click)="showDetail(search)" *ngFor="let search of searchs">
+      <ion-label>
+        <h3>{{search.title}}</h3>
+      </ion-label>
+    </ion-item>
+</ion-list>
+
+</ion-content>

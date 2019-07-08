@@ -28,11 +28,19 @@ const routes: Routes = [
   { path: 'range', loadChildren: './range/range.module#RangePageModule' },
   { path: 'refresher', loadChildren: './refresher/refresher.module#RefresherPageModule' },
   { path: 'reorder', loadChildren: './reorder/reorder.module#ReorderModule' },
-  { path: 'searchbar', loadChildren: './searchbar/searchbar.module#SearchbarPageModule' },
+  { path: 'searchbar', loadChildren: './search/search.module#SearchModule' },
   { path: 'segment', loadChildren: './segment/segment.module#SegmentModule' },
   { path: 'select', loadChildren: './select/select.module#SelectPageModule' },
   { path: 'slide', loadChildren: './slide/slide.module#SlidePageModule' },
-
+  { path: 'tab', loadChildren: './tab/tab.module#TabPageModule' },
+  { path: 'menu', loadChildren: './menu/menu.module#MenuPageModule' },
+  { path: 'toast', loadChildren: './toast/toast.module#ToastPageModule' },
+  { path: 'toggle', loadChildren: './toggle/toggle.module#TogglePageModule' },
+  { path: 'toolbar', loadChildren: './toolbar/toolbar.module#ToolbarModule' },
+  { path: 'text', loadChildren: './text/text.module#TextPageModule' },
+  { path: 'nats', loadChildren: './nats/nats.module#NatsModule' },
+  
+  
 
 ];
 @NgModule({
