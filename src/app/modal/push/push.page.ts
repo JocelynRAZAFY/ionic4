@@ -12,10 +12,11 @@ export class PushPage implements OnInit {
   tech: any
   
   constructor(
-    public activatedRoute: ActivatedRoute) { 
+    public activatedRoute: ActivatedRoute) {
+
       this.activatedRoute.queryParams.subscribe(params => {
         this.tech = JSON.parse(params["tech"]);
-    });
+      });
     
   }
 
