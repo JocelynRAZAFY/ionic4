@@ -185,6 +185,11 @@ export class AppComponent {
       title: 'Native',
       url: '/nats',
       icon: 'planet'
+    },
+    {
+      title: 'Developers',
+      url: '/developers',
+      icon: 'bug'
     }
   ];
   

@@ -10,6 +10,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PopPageModule } from './modal/pop/pop.module';
 import { PopComponentPageModule } from './popover/pop-component/pop-component.module';
+import { NativeStorage } from '@ionic-native/native-storage/ngx';
+import { SQLite, SQLiteObject } from '@ionic-native/sqlite/ngx';
+import { SQLitePorter } from '@ionic-native/sqlite-porter/ngx';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,11 +23,15 @@ import { PopComponentPageModule } from './popover/pop-component/pop-component.mo
     IonicModule.forRoot(), 
     AppRoutingModule,
     PopPageModule,
-    PopComponentPageModule
+    PopComponentPageModule,
+    HttpClientModule
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    NativeStorage,
+    SQLite,
+    SQLitePorter,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

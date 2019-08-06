@@ -39,9 +39,8 @@ const routes: Routes = [
   { path: 'toolbar', loadChildren: './toolbar/toolbar.module#ToolbarModule' },
   { path: 'text', loadChildren: './text/text.module#TextPageModule' },
   { path: 'nats', loadChildren: './nats/nats.module#NatsModule' },
-  
-  
-
+  { path: 'developers', loadChildren: './pages/developers/developers.module#DevelopersPageModule' },
+  { path: 'developer/:id', loadChildren: './pages/developer/developer.module#DeveloperPageModule' },
 ];
 @NgModule({
   imports: [
