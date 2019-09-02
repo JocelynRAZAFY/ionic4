@@ -11,9 +11,34 @@ import { AppComponent } from './app.component';
 import { PopPageModule } from './modal/pop/pop.module';
 import { PopComponentPageModule } from './popover/pop-component/pop-component.module';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
-import { SQLite, SQLiteObject } from '@ionic-native/sqlite/ngx';
+import { SQLite, SQLiteObject, SQLiteDatabaseConfig } from '@ionic-native/sqlite/ngx';
 import { SQLitePorter } from '@ionic-native/sqlite-porter/ngx';
 import { HttpClientModule } from '@angular/common/http';
+import { HTTP } from '@ionic-native/http/ngx';
+//var initSqlJs = require('sql.js');
+import { query } from 'sql.js';
+
+class SQLiteMock {
+  public create(config: SQLiteDatabaseConfig): Promise<SQLiteObject> {
+    
+    var db;
+    var storeddb = localStorage.getItem("database");
+
+    var arr = storeddb.split(',');
+    if(storeddb)
+    {
+        db = new SQL.Database()
+    }
+    else
+    {
+        db = new SQL.Database();
+    }
+
+      return new Promise((resolve,reject)=>{
+          resolve(new SQLiteObject(new Object(db)));
+      });
+  }
+  } 
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,7 +49,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     PopPageModule,
     PopComponentPageModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [
     StatusBar,
@@ -32,7 +57,9 @@ import { HttpClientModule } from '@angular/common/http';
     NativeStorage,
     SQLite,
     SQLitePorter,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    {provide: SQLite, useClass: SQLiteMock},
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    HTTP
   ],
   bootstrap: [AppComponent]
 })

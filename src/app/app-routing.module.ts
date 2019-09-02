@@ -41,6 +41,8 @@ const routes: Routes = [
   { path: 'nats', loadChildren: './nats/nats.module#NatsModule' },
   { path: 'developers', loadChildren: './pages/developers/developers.module#DevelopersPageModule' },
   { path: 'developer/:id', loadChildren: './pages/developer/developer.module#DeveloperPageModule' },
+  { path: 'browser', loadChildren: './browser/browser.module#BrowserPageModule' },
+
 ];
 @NgModule({
   imports: [

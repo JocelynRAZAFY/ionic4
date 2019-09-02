@@ -24,13 +24,14 @@
     "@ionic-native/core": "^5.0.0",
     "@ionic-native/crop": "^5.9.0",
     "@ionic-native/file-chooser": "^5.9.0",
-    "@ionic-native/http": "^5.11.0",
+    "@ionic-native/http": "^5.12.0",
     "@ionic-native/native-storage": "^5.11.0",
     "@ionic-native/splash-screen": "^5.0.0",
     "@ionic-native/sqlite": "^5.11.0",
     "@ionic-native/sqlite-porter": "^5.11.0",
     "@ionic-native/status-bar": "^5.0.0",
     "@ionic/angular": "^4.1.0",
+    "@types/sql.js": "^1.0.2",
     "com-badrit-base64": "^0.2.0",
     "cordova-android": "8.0.0",
     "cordova-plugin-advanced-http": "^2.1.1",
@@ -41,6 +42,7 @@
     "cordova-sqlite-storage": "^3.2.1",
     "core-js": "^2.5.4",
     "rxjs": "~6.5.1",
+    "sql.js": "^1.0.0",
     "tslib": "^1.9.0",
     "uk.co.workingedge.cordova.plugin.sqliteporter": "^1.1.0",
     "zone.js": "~0.8.29"
@@ -57,7 +59,7 @@
     "@ionic/angular-toolkit": "~1.5.1",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
-    "@types/node": "~12.0.0",
+    "@types/node": "^12.7.3",
     "codelyzer": "~4.5.0",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-ionic-keyboard": "^2.1.3",
@@ -94,9 +96,7 @@
       "cordova-plugin-nativestorage": {},
       "cordova-sqlite-storage": {},
       "uk.co.workingedge.cordova.plugin.sqliteporter": {},
-      "cordova-plugin-advanced-http": {
-        "OKHTTP_VERSION": "3.10.0"
-      }
+      "cordova-plugin-advanced-http": {}
     },
     "platforms": [
       "android"

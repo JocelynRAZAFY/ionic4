@@ -190,6 +190,11 @@ export class AppComponent {
       title: 'Developers',
       url: '/developers',
       icon: 'bug'
+    },
+    {
+      title: 'Browser',
+      url: '/browser',
+      icon: 'browsers'
     }
   ];
   
