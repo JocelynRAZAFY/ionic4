@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+    <ion-title>
+        Canvas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-toolbar>
+    <ion-row>
+        <ion-col *ngFor="let color of avalaibleColors" 
+        [style.background]="color" class="color-block" 
+        tappable (click)="changeColor(color)"></ion-col>
+      </ion-row>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-buttons>
+        <ion-button (click)="changeSize(size)" *ngFor="let size of avalaibleSize" 
+        expand="block" fill="outline">
+          {{size}}
+        </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+<ion-content>
+   <h1 id="palette">Jocelyn</h1>
+   <div id="capture" style="padding: 10px; background: #f5da55">
+      <h4 style="color: #000; ">Hello world!</h4>
+  </div>
+  <canvas #myCanvas 
+  (touchstart)="handleStart($event)" 
+  (touchmove)="handlemove($event)"
+  (touchend)="handleEnd($event)">
+  </canvas>
+
+  <ion-row>
+      <ion-col>
+            <div class="label-container" [style.background-image]="'url('+ screen + ')'">
+                
+            </div>
+      </ion-col>
+  </ion-row>
+
+  <ion-button outline (click)="screenShot()">Screenshot (PIC)</ion-button>
+  <ion-button outline (click)="screenShotURI()">Screenshot (URI)</ion-button>
+
+  <img src="{{ screen }}" *ngIf="state">
+</ion-content>

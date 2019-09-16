@@ -42,6 +42,7 @@ const routes: Routes = [
   { path: 'developers', loadChildren: './pages/developers/developers.module#DevelopersPageModule' },
   { path: 'developer/:id', loadChildren: './pages/developer/developer.module#DeveloperPageModule' },
   { path: 'browser', loadChildren: './browser/browser.module#BrowserPageModule' },
+  { path: 'canvas', loadChildren: './canvas/canvas.module#CanvasPageModule' },
 
 ];
 @NgModule({

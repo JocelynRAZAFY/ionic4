@@ -15,10 +15,14 @@ import { SQLite, SQLiteObject, SQLiteDatabaseConfig } from '@ionic-native/sqlite
 import { SQLitePorter } from '@ionic-native/sqlite-porter/ngx';
 import { HttpClientModule } from '@angular/common/http';
 import { HTTP } from '@ionic-native/http/ngx';
+import { FilePath } from '@ionic-native/file-path/ngx';
+import { File } from '@ionic-native/file/ngx';
+import { WebView } from '@ionic-native/ionic-webview/ngx';
+import { Screenshot } from '@ionic-native/screenshot/ngx';
 //var initSqlJs = require('sql.js');
-import { query } from 'sql.js';
+//import { query } from 'sql.js';
 
-class SQLiteMock {
+/*class SQLiteMock {
   public create(config: SQLiteDatabaseConfig): Promise<SQLiteObject> {
     
     var db;
@@ -38,7 +42,7 @@ class SQLiteMock {
           resolve(new SQLiteObject(new Object(db)));
       });
   }
-  } 
+  } */
 
 @NgModule({
   declarations: [AppComponent],
@@ -57,7 +61,11 @@ class SQLiteMock {
     NativeStorage,
     SQLite,
     SQLitePorter,
-    {provide: SQLite, useClass: SQLiteMock},
+    FilePath,
+    File,
+    WebView,
+    Screenshot,
+   // {provide: SQLite, useClass: SQLiteMock},
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     HTTP
   ],

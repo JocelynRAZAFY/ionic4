@@ -48,7 +48,7 @@ export class FileChooserPage implements OnInit {
   }
 
   cropImg(path){
-    this.crop.crop(path, {quality: 75})
+    this.crop.crop(path, {quality: 100})
     .then(
       newImage => {
         this.imgNewToBase64(newImage)

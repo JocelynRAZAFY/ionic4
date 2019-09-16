@@ -12,6 +12,11 @@ export class AppComponent {
 
   public appPages = [
     {
+      title: 'Canvas',
+      url: '/canvas',
+      icon: 'browsers'
+    },
+    {
       title: 'Index',
       url: '/tabs',
       icon: 'tablet-portrait'
